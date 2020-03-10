@@ -4,7 +4,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 
-	"github.com/aianman4823/sample-echo/handler/handler.go"
+	"local.packages/handler"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 	e.Use(middleware.Recover())
 
 	// ルーティング
-	e.GET("/", handler.hello)
+	e.GET("/", handler.Hello())
 
 	// サーバー起動
 	e.Start(":1323")
