@@ -16,9 +16,8 @@ func main() {
 	e.Use(middleware.Recover())
 
 	// ルーティング
-	e.GET("/", handler.Hello())
+	e.GET("/hello/:username", handler.Hello())
 
 	// サーバー起動
 	e.Start(":1323")
 }
-
